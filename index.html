@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+ <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Baloo+Thambi+2&family=Comic+Neue:wght@300&family=Josefin+Sans:wght@300&family=Raleway:wght@200&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=Liu+Jian+Mao+Cao&family=Raleway:wght@300&display=swap" rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+
+body {
+font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+   background-image:  url('bg-pattern-desktop.svg') ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+   #image1{
+    position: relative;
+    width: 400px;
+    height: 600px;
+   top: -220px;
+   right: -720px;
+   }
+  .{
+    margin: 0px;
+    padding: 0px;
+    font-family: Roboto;
+  }
+
+  #image1:hover{
+    filter: grayscale(100%);
+    transition: filter 2s;
+  }
+  .container{
+    position: absolute;
+    max-width: 300px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 20px 20px 20px 20px;
+    margin-top: 25px;
+    top: 370px;
+    left: 160px;
+  }
+  input[type="email"]{
+    background: transparent;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 40px 40px 40px 40px;
+    padding: 0.25px;
+    position: relative;
+    left: -80px;
+    bottom: 5px;
+  }
+
+  #lbl{
+    color: black;
+    margin-top: 15px;
+    position: absolute;
+    padding-left: 10px;
+    font-size: 15px;
+  }
+
+  #email{
+    margin-left: 125px;
+    margin-top: 15px;
+    width: 60%;
+    height: 25px;
+    text-indent: 15px;
+  }
+
+  i.fa{
+    font-size: 15px;
+    position: absolute;
+    left: 400px;
+    top: 10px;
+  }
+
+  #success{
+    color: green;
+    display: none;
+  }
+  #error{
+    color: red;
+    display: none;
+  }
+   #warning{
+    color: orange;
+    display: none;
+  }
+
+   #span1{
+    font-size: 13px;
+    margin-left: 45px;
+    margin-top: 5px;
+    color: red;
+    font-weight: bold;
+    display: none;
+  }
+   #span2{
+    font-size: 13px;
+    margin-left: 45px;
+    margin-top: 5px;
+    color: red;
+    font-weight: bold;
+    display: none;
+  }
+  
+ 
+    .contents button{
+      position: relative;
+      left: 250px;
+      bottom: 50px;
+      width: 80px;
+      height: 60px;
+      background-color: pink;
+      border: 1px solid pink;
+      border-radius: 25px;
+    }
+
+    .contents button i{
+       position: relative;
+      left: 0px;
+      top: -2px;
+      width: 40px;
+      background-color: pink;
+      color: white;
+    }
+    .contents button i:hover{
+      font-size: 60px;    }
+
+
+  ::-webkit-input-placeholder{
+    font-size: 25px;
+  }
+
+  h1 span:nth-child(1){
+    color: pink;
+    position: relative;
+    top: 110px;
+    left: 180px;
+    font-weight: lighter;
+    font-size: 60px;
+    letter-spacing: 5px;
+    font-family:  'Josefin Sans', sans-serif;
+  }
+  h1 span:nth-child(2){
+    position: relative;
+    top: 150px;
+    left: -01px;
+    font-weight: bold;
+    font-size: 60px;
+    letter-spacing: 5px;
+    font-family:  'Josefin Sans', sans-serif;
+    color: black;
+  }
+  h1 span:nth-child(3){
+    position: relative;
+    top: 185px;
+    left: -240px;
+    font-weight: bolder;
+    font-size: 60px;
+    letter-spacing: 5px;
+    font-family:  'Josefin Sans', sans-serif;
+    color: black;
+  }
+
+  #para1{
+    position: relative;
+    color: pink;
+    top: 180px;
+    left: 170px;
+    font-weight: normal;
+    font-size: 15px;
+    font-family:  'Josefin Sans', sans-serif;
+    max-width: 300px;
+    text-indent: 10px;
+  }
+
+#logo{
+  position: relative;
+  top: 20px;
+  left: 170px;
+}
+
+#footer{
+  background-color: pink;
+  opacity: 0.8;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+ h1 span:nth-child(1){
+  font-family: 'Raleway', sans-serif;
+ }
+  h1 span:nth-child(2){
+  font-family: 'Comic Neue', cursive;
+ }
+  h1 span:nth-child(3){
+  font-family: 'Liu Jian Mao Cao', cursive;
+ }
+#image1{
+  position: relative;
+  width: 300px;
+  height: auto;
+  bottom: -250px;
+  padding-right: 30px;
+  padding-top: 30px;
+}
+ .contents button{
+      position: relative;
+      left: 235px;
+      bottom: 50px;
+      width: 80px;
+      height: 60px;
+      background-color: pink;
+      border: 1px solid pink;
+      border-radius: 25px;
+    }
+
+    .contents button i{
+       position: relative;
+      left: -4px;
+      top: -2px;
+      width: 40px;
+      background-color: pink;
+      color: white;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+  h1 span:nth-child(1){
+  font-family: 'Raleway', sans-serif;
+ }
+  h1 span:nth-child(2){
+  font-family: 'Comic Neue', cursive;
+ }
+  h1 span:nth-child(3){
+  font-family: 'Liu Jian Mao Cao', cursive;
+ }
+#image1{
+  position: relative;
+  width: 300px;
+  height: auto;
+  bottom: -250px;
+  padding-right: 30px;
+  padding-top: 30px;
+}
+ .contents button{
+      position: relative;
+      left: 235px;
+      bottom: 50px;
+      width: 80px;
+      height: 60px;
+      background-color: pink;
+      border: 1px solid pink;
+      border-radius: 25px;
+    }
+
+    .contents button i{
+       position: relative;
+      left: -4px;
+      top: -2px;
+      width: 40px;
+      background-color: pink;
+      color: white;
+    }
+
+}
+
+  </style>
+</head>
+<body onload="fun()">
+ 
+  <img src="logo.svg" id="logo" alt="logo">
+
+<h1><span> We're</span>
+<span> coming </span>
+<span>soon</span></h1>
+ 
+
+ <p id="para1"> Hello fellow shoppers! We're currently building our new fashion store. 
+  Add your email below to stay up-to-date with announcements and our launch deals.</p>
+<div class="container">
+ <div class="contents">
+  <form action="#" method="post">
+  
+   <i class="fa fa-check" id="success"></i>
+    <i class="fa fa-times" id="error"></i>
+     <i class="fa fa-exclamation" id="warning"></i>
+     <input type="email" id="email" placeholder="Email Address"><br>
+     <span id="span1">Enter a valid email address</span>
+     <span id="span2">This field cannot be empty</span>
+    <button class="botton"><i class="fa fa-angle-right"></i></button>
+  </form>
+ </div>
+</div>
+
+ <img src="hero-desktop.jpg" id="image1" alt="image1">
+ 
+  
+  <footer id="footer">
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Sourav Ghatak</a>.
+    </p>
+  </footer>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#email').focusout(function() {
+       email_validate();
+      });
+
+      function email_validate(){
+        var pattern=/^[a-z]+\d+[\W]+[a-z]+[\W]+[a-z]{2,3}$/;
+        var email=$('#email').val();
+
+        if (email !== '' ) {
+          if(pattern.test(email)){
+          $('#lbl').css('color', 'green');
+           $('#email').css('border', '2px solid green');
+            $('#success').css('display', 'block');
+             $('#error').css('display', 'none');
+             $('#warning').css('display', 'none');
+             $('#span1').css('display', 'none');
+             $('#span2').css('display', 'none');
+             
+        }else{
+           $('#lbl').css('color', 'red');
+           $('#email').css('border', '2px solid red');
+            $('#success').css('display', 'none');
+             $('#error').css('display', 'block');
+             $('#warning').css('display', 'none');
+             $('#span1').css('display', 'block');
+             $('#span2').css('display', 'none');
+        } 
+      } else {
+           $('#lbl').css('color', 'red');
+           $('#email').css('border', '2px solid red');
+            $('#success').css('display', 'none');
+             $('#error').css('display', 'none');
+             $('#warning').css('display', 'block');
+             $('#span1').css('display', 'none');
+             $('#span2').css('display', 'block');
+        }
+      }
+
+      $(document).ready(function() {
+        $('#logo').on('mouseover', function() {
+         $('#logo').addClass('animated flip');
+          
+        });
+      });
+
+      $(document).ready(function() {
+        $('#para1').on('mouseover', function() {
+         $('#para1').css('color', 'black');
+        });
+      });
+
+      $(document).ready(function() {
+        $('#para1').on('mouseout', function() {
+         $('#para1').css('color', 'pink');
+        });
+      });
+
+      window.onload
+
+    });
+
+   function fun(){
+    alert('Welcome User!');
+   }
+
+   window.onbeforeunload=function(){
+        var a=confirm('do u wanna leave this page?');
+        if (a) {
+          alert('thank u');
+        } else {
+          alert('good bye');
+        }
+        return a;
+      }
+
+  </script>
+</body>
+</html>
